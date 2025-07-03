@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Mini Meters</title>
+  <link rel="stylesheet" href="PRODUCT.CSS" />
+</head>
+<body>
+  <header>
+    <h1>Our Products</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="product-section">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/product1.jpg" alt="Fuel Gauge" />
+        <h3>Fuel Gauge</h3>
+        <p>High-accuracy fuel gauge for trucks and heavy vehicles.</p>
+        <p class="price">₹1,299</p>
+        <div class="actions">
+          <input type="text" placeholder="Apply coupon code" />
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="Pressure Meter" />
+        <h3>Pressure Meter</h3>
+        <p>Durable and reliable pressure meter for industrial use.</p>
+        <p class="price">₹1,699</p>
+        <div class="actions">
+          <input type="text" placeholder="Apply coupon code" />
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product3.jpg" alt="Temperature Sensor" />
+        <h3>Temperature Sensor</h3>
+        <p>Precision temperature sensors with quick response time.</p>
+        <p class="price">₹899</p>
+        <div class="actions">
+          <input type="text" placeholder="Apply coupon code" />
+          <button>Add to Cart</button>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mini Meters Manufacturing Co. Pvt. Ltd.</p>
+  </footer>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".product-card");
+
+    cards.forEach((card) => {
+      const applyField = card.querySelector("input[type='text']");
+      const priceField = card.querySelector(".price");
+      let originalPrice = parseFloat(priceField.textContent.replace(/[₹,]/g, ""));
+
+      applyField.addEventListener("change", () => {
+        const code = applyField.value.trim().toUpperCase();
+        if (code === "MINI10") {
+          const discount = originalPrice * 0.10;
+          const newPrice = originalPrice - discount;
+          priceField.textContent = `₹${newPrice.toFixed(2)} (10% OFF)`;
+          applyField.disabled = true;
+          applyField.value = "Applied";
+        } else {
+          alert("Invalid coupon code. Try MINI10");
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

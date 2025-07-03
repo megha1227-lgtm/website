@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Meters Website</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header>
+
+  <h1>Mini Meters</h1>
+  <div class="header-top">
+    <h1>Mini Meters</h1>
+    
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="PRODUCT.HTML">Products</a>
+    <a href="BLOG.HTML">Blog</a>
+    <a href="Achievements .html">Achievements</a>
+    <a href="ABOUTUS.HTML">About</a>
+    <a href="CONTACTUS.HTML">Contact</a>
+  </nav>
+</header>
+
+  <main>
+    <!-- Introduction Slides -->
+    <section id="intro">
+      <h2>Our Highlights</h2>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">High-Quality Products</div>
+          <div class="slide">Trusted by Thousands</div>
+          <div class="slide">Affordable Prices</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalogue -->
+    <section id="products">
+      <h2>Our Product Catalogue</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Fuel Gauge</h3>
+          <p>Durable and accurate fuel gauges for heavy-duty vehicles.</p>
+        </div>
+        <div class="product-card">
+          <h3>Temperature Meter</h3>
+          <p>Reliable temperature meters for machinery monitoring.</p>
+        </div>
+        <div class="product-card">
+          <h3>Oil Pressure Meter</h3>
+          <p>High-precision oil pressure meters for commercial vehicles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Star Rating -->
+    <section id="rate">
+      <h2>Rate Your Experience</h2>
+      <div class="star-rating">
+        <span class="star" data-value="1">&#9734;</span>
+        <span class="star" data-value="2">&#9734;</span>
+        <span class="star" data-value="3">&#9734;</span>
+        <span class="star" data-value="4">&#9734;</span>
+        <span class="star" data-value="5">&#9734;</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Thank You Popup -->
+  <div id="thankYouPopup" class="thank-you-popup">
+    <h2>⭐ Thank You!</h2>
+    <p>Your rating has been received.</p>
+  </div>
+
+  <!-- Footer with Contact Form -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-form">
+        <h3>Contact & Feedback</h3>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+        <p id="formResponse"></p>
+      </div>
+      <div class="footer-note">
+        <p>&copy; 2025 Mini Meters Manufacturing Co. Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

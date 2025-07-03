@@ -1,0 +1,127 @@
+/* ==== PRODUCT PAGE STYLING ==== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #EDE3DB;
+  color: #402E2A;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #402E2A;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #EDE3DB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #947C70;
+}
+
+main.product-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background-color: #FAF5F0;
+  padding: 20px;
+  border: 1px solid #947C70;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  color: #402E2A;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #947C70;
+  margin-bottom: 10px;
+}
+
+.product-card .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-card .actions input[type="text"] {
+  padding: 8px;
+  border: 1px solid #947C70;
+  border-radius: 5px;
+}
+
+.product-card .actions button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #947C70;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .actions button:hover {
+  background-color: #402E2A;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #402E2A;
+  color: white;
+  margin-top: 50px;
+}

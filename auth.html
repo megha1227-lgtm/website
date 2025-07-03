@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Sign Up - Mini Meters</title>
+  <link rel="stylesheet" href="css/auth-style.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <h1>Welcome to Mini Meters</h1>
+
+    <!-- Toggle Buttons -->
+    <div class="form-toggle">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showSignup()">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-box" id="login-box">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button onclick="loginUser()">Login</button>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="form-box" id="signup-box" style="display:none;">
+      <h2>Create Account</h2>
+      <input type="text" id="signup-name" placeholder="Full Name" required>
+      <input type="email" id="signup-email" placeholder="Email" required>
+      <input type="password" id="signup-password" placeholder="Password" required>
+      <button onclick="signupUser()">Sign Up</button>
+    </div>
+
+    <!-- After Login Profile Info -->
+    <div id="profile-info" style="display:none;">
+      <img src="images/user-icon.png" class="profile-img" />
+      <h3 id="profile-name"></h3>
+      <p id="profile-email"></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById('login-box').style.display = 'block';
+      document.getElementById('signup-box').style.display = 'none';
+    }
+
+    function showSignup() {
+      document.getElementById('signup-box').style.display = 'block';
+      document.getElementById('login-box').style.display = 'none';
+    }
+
+    function loginUser() {
+      const email = document.getElementById('login-email').value;
+      const name = localStorage.getItem('userName') || 'User';
+      localStorage.setItem('userEmail', email);
+      showProfile(name, email);
+    }
+
+    function signupUser() {
+      const name = document.getElementById('signup-name').value;
+      const email = document.getElementById('signup-email').value;
+      localStorage.setItem('userName', name);
+      localStorage.setItem('userEmail', email);
+      showProfile(name, email);
+    }
+
+    function showProfile(name, email) {
+      document.getElementById('login-box').style.display = 'none';
+      document.getElementById('signup-box').style.display = 'none';
+      document.getElementById('profile-info').style.display = 'block';
+      document.getElementById('profile-name').innerText = name;
+      document.getElementById('profile-email').innerText = email;
+    }
+
+    function logout() {
+      localStorage.clear();
+      location.reload();
+    }
+
+    // Show profile if already logged in
+    window.onload = () => {
+      const email = localStorage.getItem('userEmail');
+      const name = localStorage.getItem('userName');
+      if (email && name) {
+        showProfile(name, email);
+      }
+    }
+    
+  </script>
+</body>
+</html>
