@@ -44,3 +44,11 @@ submitBtn.addEventListener('click', () => {
   commentBox.style.display = 'none';
   stars.forEach(s => s.innerHTML = '☆');
 });
+
+  const menuIcon = document.getElementById("menuIcon");
+  const nav = document.querySelector("nav");
+
+  menuIcon.addEventListener("click", () => {
+    nav.style.display = (nav.style.display === "block") ? "none" : "block";
+  });
+

@@ -111,6 +111,48 @@ p {
 }
 
 /* ==== HEADER ==== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #947C70;
+}
+
+#searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #947C70;
+  cursor: pointer;
+}
+
+#menuIcon {
+  font-size: 24px;
+  color: #EDE3DB;
+  cursor: pointer;
+  display: none; /* Show only on mobile */
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  #menuIcon {
+    display: block;
+  }
+}
+
 header {
   background: #402E2A;
   color: white;
