@@ -222,8 +222,21 @@ header {
 }
 
 /* General Navbar Layout */
-/* Navbar Styling */
+/*  */
+
 /* Navbar Wrapper */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  } }
+
 .navbar {
   background-color: #947C70;
   padding: 10px 30px;
