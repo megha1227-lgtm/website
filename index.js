@@ -126,6 +126,9 @@ submitBtn.addEventListener('click', () => {
     }
   };
 
-function toggleMenu() {
-  document.getElementById("navLeft").classList.toggle("show");
-}
+
+  function toggleMenu() {
+    const nav = document.getElementById("navLeft");
+    nav.classList.toggle("show");
+  }
+
