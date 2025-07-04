@@ -10,10 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Add to your HTML -->
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
+
 
  
 
@@ -21,36 +18,49 @@
 <body>
 
   <header>
-    <div class="header-actions">
-  <!-- Search Icon & Bar -->
-  <div class="search-box">
-    <input type="text" placeholder="Search..." id="searchInput">
-    <i class="fas fa-search" id="searchIcon"></i>
+ <nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="PRODUCT.HTML">Products</a>
+      <a href="BLOG.HTML">Blog</a>
+      <a href="Achievements.html">Achievements</a>
+      <a href="ABOUTUS.HTML">About</a>
+      <a href="CONTACTUS.HTML">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <!-- Search -->
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </div>
-
-  <!-- Menu Icon for Mobile -->
-  <i class="fas fa-bars" id="menuIcon"></i>
-</div>
+</nav>
 
 
-  <h1>Mini Meters</h1>
-  <section class="hero-banner">
-  <div class="hero-content">
-    <h1>Mini Meters Manufacturing</h1>
-    <p>India’s Leading Industrial Meter Exporter</p>
-    
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <h1>Mini Meters Manufacturing Co. Pvt. Ltd.</h1>
+    <p>Precision. Performance. Perfection.</p>
+    <button>Explore Our Products</button>
   </div>
 </section>
+
+
     
-  </div>
-   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="PRODUCT.HTML">Products</a>
-    <a href="BLOG.HTML">Blog</a>
-    <a href="Achievements .html">Achievements</a>
-    <a href="ABOUTUS.HTML">About</a>
-    <a href="CONTACTUS.HTML">Contact</a>
-  </nav>
+ 
 </header>
 
   <main>
@@ -66,6 +76,27 @@
     </div>
   </div>
 </section>
+
+<!-- Floating Chat Icons -->
+<div class="floating-icons">
+  <a href="https://wa.me/919000000000" target="_blank" title="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <div id="chatbot-icon" onclick="toggleChat()" title="Chat with us">
+    💬
+  </div>
+</div>
+
+<!-- Chatbox UI -->
+<div id="chatbox" class="chatbox" style="display: none;">
+  <div class="chat-header">🤖 AI Support Chat</div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKey(event)">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
 
 
     <!-- Product Catalogue -->

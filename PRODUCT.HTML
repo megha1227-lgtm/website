@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Mini Meters</title>
   <link rel="stylesheet" href="PRODUCT.CSS" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
   <header>
     <h1>Our Products</h1>
-    <nav class="navbar">
+    <div class="nav-container">
+    <div class="nav-left">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <a href="PRODUCT.HTML">Products</a>
+      <a href="BLOG.HTML">Blog</a>
+      <a href="Achievements.html">Achievements</a>
+      <a href="ABOUTUS.HTML">About</a>
+      <a href="CONTACTUS.HTML">Contact</a>
+    </div>
   </header>
 
   <main class="product-section">
@@ -57,34 +62,73 @@
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Mini Meters Manufacturing Co. Pvt. Ltd.</p>
-  </footer>
+  <!-- Floating Chat Icons -->
+<div class="floating-icons">
+  <a href="https://wa.me/919000000000" target="_blank" title="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <div id="chatbot-icon" onclick="toggleChat()" title="Chat with us">
+    💬
+  </div>
+</div>
+
+<!-- Chatbox UI -->
+<div id="chatbox" class="chatbox" style="display: none;">
+  <div class="chat-header">🤖 AI Support Chat</div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKey(event)">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+  <footer id="contact">
+  <div class="footer-container">
+
+    <!-- Contact Form (Left Side) -->
+    <div class="footer-form">
+      <h3>Contact & Feedback</h3>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formResponse"></p>
+    </div>
+
+    <!-- Footer Info (Right Side) -->
+    <div class="footer-info">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="PRODUCT.HTML">Products</a></li>
+        <li><a href="ABOUTUS.HTML">About Us</a></li>
+        <li><a href="CONTACTUS.HTML">Contact</a></li>
+      </ul>
+
+      <h3>Follow Us</h3>
+<div class="social-icons">
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+</div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mini Meters Manufacturing Co. Pvt. Ltd. | All rights reserved.</p>
+  </div>
+</footer>
+
   
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".product-card");
-
-    cards.forEach((card) => {
-      const applyField = card.querySelector("input[type='text']");
-      const priceField = card.querySelector(".price");
-      let originalPrice = parseFloat(priceField.textContent.replace(/[₹,]/g, ""));
-
-      applyField.addEventListener("change", () => {
-        const code = applyField.value.trim().toUpperCase();
-        if (code === "MINI10") {
-          const discount = originalPrice * 0.10;
-          const newPrice = originalPrice - discount;
-          priceField.textContent = `₹${newPrice.toFixed(2)} (10% OFF)`;
-          applyField.disabled = true;
-          applyField.value = "Applied";
-        } else {
-          alert("Invalid coupon code. Try MINI10");
-        }
-      });
-    });
-  });
-</script>
+ <script src="index.js"></script>
+</body>
 
 </body>
 </html>
