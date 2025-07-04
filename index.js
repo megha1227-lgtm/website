@@ -113,4 +113,16 @@ submitBtn.addEventListener('click', () => {
     });
   });
 
-  
+    function acceptCookies() {
+    document.getElementById("cookie-banner").style.display = "none";
+    localStorage.setItem("cookiesAccepted", "true");
+  }
+
+  window.onload = function () {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookie-banner").style.display = "flex";
+    } else {
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+  };
+

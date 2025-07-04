@@ -909,3 +909,38 @@ i.fab:hover {
   background-color: #947C70;
   color: #fff;
 }
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #402E2A;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+#cookie-banner a {
+  color: #FAEBD7;
+  text-decoration: underline;
+}
+
+#cookie-banner button {
+  background-color: #947C70;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#cookie-banner button:hover {
+  background-color: #EDE3DB;
+  color: #402E2A;
+}
