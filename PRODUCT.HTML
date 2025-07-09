@@ -4,15 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Mini Meters</title>
-  <link rel="stylesheet" href="PRODUCT.CSS" />
+  <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
   <header>
-    <h1>Our Products</h1>
-    <div class="nav-container">
-    <div class="nav-left">
+ <nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo or Brand -->
+    <div class="brand">Mini Meters</div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-left" id="navLeft">
       <a href="index.html">Home</a>
       <a href="PRODUCT.HTML">Products</a>
       <a href="BLOG.HTML">Blog</a>
@@ -20,6 +29,27 @@
       <a href="ABOUTUS.HTML">About</a>
       <a href="CONTACTUS.HTML">Contact</a>
     </div>
+
+    <!-- Search + Social -->
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
   </header>
 
   <main class="product-section">

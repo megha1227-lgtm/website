@@ -3,15 +3,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Mini Meters</title>
-  <link rel="stylesheet" href="BLOG.CSS">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
    <header>
-    <h1>Our Products</h1>
-    <div class="nav-container">
-    <div class="nav-left">
+    <nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo or Brand -->
+    <div class="brand">Mini Meters</div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-left" id="navLeft">
       <a href="index.html">Home</a>
       <a href="PRODUCT.HTML">Products</a>
       <a href="BLOG.HTML">Blog</a>
@@ -19,6 +28,17 @@
       <a href="ABOUTUS.HTML">About</a>
       <a href="CONTACTUS.HTML">Contact</a>
     </div>
+
+    <!-- Search + Social -->
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
   </header>
      <main class="blog-list">
     <article class="blog-card">
