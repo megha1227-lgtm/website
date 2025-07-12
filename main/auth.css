@@ -1,0 +1,73 @@
+body {
+  background-color: #EDE3DB;
+  font-family: 'Segoe UI', sans-serif;
+  color: #402E2A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  width: 360px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  margin: 10px;
+  padding: 8px 20px;
+  background: #947C70;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-box input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-box button {
+  background-color: #402E2A;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#profile-info {
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+#profile-name {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #402E2A;
+}
+
+#profile-email {
+  color: #947C70;
+  font-size: 0.95rem;
+}

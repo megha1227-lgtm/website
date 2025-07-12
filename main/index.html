@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Meters Website</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Add to <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Add to your HTML -->
+
+
+ 
+
+</head>
+<body>
+   <div class="container">
+
+  <header>
+ <nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo or Brand -->
+    <div class="brand">Mini Meters</div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-left" id="navLeft">
+      <a href="index.html">Home</a>
+      <a href="PRODUCT.HTML">Products</a>
+      <a href="BLOG.HTML">Blog</a>
+      <a href="Achievements.html">Achievements</a>
+      <a href="ABOUTUS.HTML">About</a>
+      <a href="CONTACTUS.HTML">Contact</a>
+    </div>
+
+    <!-- Search + Social -->
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <h1>Mini Meters Manufacturing Co. Pvt. Ltd.</h1>
+    <p>Precision. Performance. Perfection.</p>
+    <button>Explore Our Products</button>
+  </div>
+</section>
+
+
+    
+ 
+</header>
+
+  <main>
+    <!-- Introduction Slides -->
+    <section class="slider-section">
+  <h2>Welcome to Mini Meters</h2>
+  <div class="slider-box">
+    <div class="slider-track">
+      <div class="slide">High-Quality Products</div>
+      <div class="slide">Trusted by Thousands</div>
+      <div class="slide">Affordable Prices</div>
+      <div class="slide">ISO Certified Company</div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Chat Icons -->
+<div class="floating-icons">
+  <a href="https://wa.me/919000000000" target="_blank" title="WhatsApp Chat">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <div id="chatbot-icon" onclick="toggleChat()" title="Chat with us">
+    💬
+  </div>
+</div>
+
+<!-- Chatbox UI -->
+<div id="chatbox" class="chatbox" style="display: none;">
+  <div class="chat-header">🤖 AI Support Chat</div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input">
+    <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKey(event)">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+
+
+    <!-- Product Catalogue -->
+    <section id="products">
+  <h2>Our Product Catalogue</h2>
+  <div class="product-categories">
+  <button>All</button>
+  <button>Speedometer</button>
+  <button>Fuel Gauge</button>
+  <button>Ammeters</button>
+  <button>Voltmeters</button>
+  <button>Fuel Senders</button>
+  <button>Fuel Tap</button>
+  <button>Tachometer Sensors</button>
+</div>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/product1.jpg" alt="Fuel Gauge">
+      <h3>Fuel Gauge</h3>
+      <p>Durable and accurate fuel gauges for heavy-duty vehicles.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/product2.jpg" alt="Temperature Meter">
+      <h3>Temperature Meter</h3>
+      <p>Reliable temperature meters for machinery monitoring.</p>
+    </div>
+    <div class="product-card">
+      <img src="images/product3.jpg" alt="Oil Pressure Meter">
+      <h3>Oil Pressure Meter</h3>
+      <p>High-precision oil pressure meters for commercial vehicles.</p>
+    </div>
+  </div>
+</section>
+<section id="company-tour">
+  <h2>Mini Meters Factory Tour</h2>
+  <div class="tour-slider">
+    <div class="tour-slides">
+      <img src="images/tour1.jpg" alt="Factory 1" />
+      <img src="images/tour2.jpg" alt="Factory 2" />
+      <img src="images/tour3.jpg" alt="Production Line" />
+      <img src="images/tour4.jpg" alt="Packaging" />
+    </div>
+  </div>
+</section>
+
+
+  </main>
+
+ <section id="rate" class="rating-box">
+  <h3>Rate Us</h3>
+  <div class="stars" id="starContainer">
+    <span class="star" data-value="1">&#9734;</span>
+    <span class="star" data-value="2">&#9734;</span>
+    <span class="star" data-value="3">&#9734;</span>
+    <span class="star" data-value="4">&#9734;</span>
+    <span class="star" data-value="5">&#9734;</span>
+  </div>
+
+  <textarea id="ratingComment" placeholder="Leave a comment..." rows="2"></textarea>
+  <button id="ratingSubmit">Submit</button>
+
+  <p id="thankYouMsg" style="display:none; color: green; margin-top: 10px;">Thank you for your feedback! 🌟</p>
+</section>
+
+  <footer id="contact">
+  <div class="footer-container">
+
+    <!-- Contact Form (Left Side) -->
+    <div class="footer-form">
+      <h3>Contact & Feedback</h3>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formResponse"></p>
+    </div>
+
+    <!-- Footer Info (Right Side) -->
+    <div class="footer-info">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="PRODUCT.HTML">Products</a></li>
+        <li><a href="ABOUTUS.HTML">About Us</a></li>
+        <li><a href="CONTACTUS.HTML">Contact</a></li>
+      </ul>
+
+      <h3>Follow Us</h3>
+<div class="social-icons">
+  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+</div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mini Meters Manufacturing Co. Pvt. Ltd. | All rights reserved.</p>
+  </div>
+</footer>
+<div id="cookie-banner">
+  <p>
+    🍪 We use cookies to ensure you get the best experience on our website.
+    <a href="term.html" target="_blank">Learn more</a>
+  </p>
+  <button onclick="acceptCookies()">Accept All</button>
+</div>
+
+
+  <script src="index.js"></script>
+</div>
+</body>
+</html>
